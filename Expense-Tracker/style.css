@@ -1,0 +1,39 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f3f5f9; color: #202638; padding: 32px 16px; }
+.container { max-width: 960px; margin: auto; }
+header { text-align: center; margin-bottom: 28px; }
+header h1 { color: #263c72; font-size: 32px; }
+header p { color: #778096; margin-top: 8px; }
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 24px; }
+.card, .panel { background: white; border-radius: 14px; padding: 22px; box-shadow: 0 5px 20px rgba(25,40,75,.06); }
+.card h3 { color: #778096; font-size: 14px; font-weight: 600; }
+.card h2 { margin-top: 12px; font-size: 25px; overflow-wrap: anywhere; }
+.income h2 { color: #159568; } .expense h2 { color: #dc5353; }
+.panel { margin-bottom: 22px; } .panel h2 { font-size: 19px; margin-bottom: 18px; }
+form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; }
+input, select { width: 100%; min-width: 0; padding: 12px 13px; border: 1px solid #dce1eb; border-radius: 8px; background: white; color: #202638; font-size: 14px; }
+input:focus, select:focus { outline: 2px solid #b9c8ff; border-color: #526ed0; }
+button { border: 0; border-radius: 8px; padding: 12px 16px; background: #405fc5; color: white; font-weight: 700; cursor: pointer; transition: .2s; }
+button:hover { background: #2c469f; }
+.history-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.history-header select { max-width: 190px; } #search { margin-bottom: 12px; }
+.transaction { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 2px; border-bottom: 1px solid #edf0f5; }
+.transaction:last-child { border-bottom: 0; }
+.transaction-info h3 { font-size: 15px; margin-bottom: 5px; overflow-wrap: anywhere; }
+.transaction-info p { color: #8991a2; font-size: 12px; }
+.transaction-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.amount-income, .amount-expense { font-weight: 700; white-space: nowrap; }
+.amount-income { color: #159568; } .amount-expense { color: #dc5353; }
+.delete-btn { background: #fff0f0; color: #c43d3d; padding: 8px 11px; }
+.delete-btn:hover { background: #ffe0e0; }
+.empty { text-align: center; color: #8991a2; padding: 25px 8px; }
+footer { text-align: center; color: #9299a8; font-size: 12px; padding: 8px; }
+@media (max-width: 650px) {
+  body { padding: 22px 12px; }
+  .summary { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 18px; } form { grid-template-columns: 1fr; }
+  .history-header { align-items: stretch; flex-direction: column; }
+  .history-header select { max-width: none; }
+  .transaction { align-items: flex-start; }
+  .transaction-right { flex-direction: column; align-items: flex-end; gap: 8px; }
+}
